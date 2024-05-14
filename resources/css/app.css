@@ -1,1 +1,29 @@
 @import 'bootstrap/dist/css/bootstrap.min.css';
+
+.round-img {
+    width: 350px; /* Adjust size as needed */
+    height: 350px; /* Adjust size as needed */
+    transition: transform 0.3s ease;
+  }
+
+  .round-img:hover {
+    transform: scale(1.1);
+}
+
+.round-img-link {
+display: inline-block;
+width: 350px; /* Adjust size to match the image */
+height: 350px; /* Adjust size to match the image */
+padding: 0;
+border-radius: 50%;
+}
+
+.img1{
+  margin-top: -5px;
+}
+.img2{
+  margin-top: 25vh;
+}
+.img3{
+  margin-top: 5px;
+}
