@@ -27,3 +27,21 @@ border-radius: 50%;
 .img3{
   margin-top: 5px;
 }
+.hero-text{
+  font-size: 4rem;
+  margin: 0;
+  line-height: 2.5;
+}
+
+.content::before{
+  margin-top: 4rem;
+  content: '';
+  display: block;
+  width: 100%; /* Stretch the line to the width of its container */
+  height: 1px; /* Height of the line */
+  background-color: black; /* Color of the line */
+}
+
+.nav-link{
+  color: black;
+}
