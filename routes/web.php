@@ -7,10 +7,13 @@ Route::get('/', [WelcomeController::class, 'index']);
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::group(['middleware' => 'auth:sanctum'], function(){
 
-Route::get('/tourguides', [App\Http\Controllers\GuideController::class, 'index'])->name('guides');
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/tourpackages', [App\Http\Controllers\TourPackageController::class, 'index'])->name('packages');
+    Route::get('/tourguides', [App\Http\Controllers\GuideController::class, 'index'])->name('guides');
 
-Route::get('/accommodation', [App\Http\Controllers\AccommodationController::class, 'index'])->name('accommodation');
+    Route::get('/tourpackages', [App\Http\Controllers\TourPackageController::class, 'index'])->name('packages');
+
+    Route::get('/accommodation', [App\Http\Controllers\AccommodationController::class, 'index'])->name('accommodation');
+});
