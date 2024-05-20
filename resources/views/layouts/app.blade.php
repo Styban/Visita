@@ -15,7 +15,7 @@
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
 
     <!-- Scripts -->
-    @if (Route::has('home'))
+    @if (Route::is('home'))
         <style>
             body,
             html {
