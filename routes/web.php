@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\WelcomeController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\DB;
 
 Route::get('/', [WelcomeController::class, 'index']);
 

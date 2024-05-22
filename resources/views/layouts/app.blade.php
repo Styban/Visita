@@ -32,7 +32,7 @@
             /* Optionally, you can style your content here */
         </style>
     @endif
-    @vite(['resources/sass/app.scss', 'resources/js/app.js', 'resources/css/app.css'])
+    @vite(['resources/sass/app.scss', 'resources/css/app.css'])
 </head>
 
 <body>
@@ -51,7 +51,19 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
+                        
+                    </ul>
 
+                    <ul class="nav justify-content-center isotope-options mb-60 pb-30">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">apple</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">banana</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">cherry</a>
+                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -98,6 +110,10 @@
             @yield('content')
         </main>
     </div>
+    @vite(['resources/js/app.js'])
+    @if (Route::is('guides'))
+        @vite(['resources/js/tourguide.js'])
+    @endif
 </body>
 
 </html>
